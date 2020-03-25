@@ -67,10 +67,7 @@
  - 게임오버될경우 Lobby Scene으로 돌아감\
  
  
- 4. 오브젝트
 #### 4. 오브젝트 생성
-
->>>>>>> 47e1b0665a47bfec33cf49fa6e5c46cb3a5fd997
  ![Object](./img/오브젝트.png)
 - syCharacter
    - sprite클래스 상속
