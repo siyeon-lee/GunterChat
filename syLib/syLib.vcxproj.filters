@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{ab453cbd-b744-49cd-8f86-15ad39e13655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="syGame">
+      <UniqueIdentifier>{72ab772f-399e-4d8d-ad8e-1872103ee825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="syGame\marioState">
+      <UniqueIdentifier>{643b2245-859e-4f97-a952-ee8f03ebcf0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="syCore.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syInput.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sySound.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sySoundMgr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syTimer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syWindow.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syBitmap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syBitmapMgr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syScriptManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sySprite.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syCollision.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syImgCtrl.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="syListCtrl.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="syPanel.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="syScene.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="syUIComponent.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="syButtonCtrl.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="syPlayer.cpp">
+      <Filter>syGame</Filter>
+    </ClCompile>
+    <ClCompile Include="syBackground.cpp">
+      <Filter>syGame</Filter>
+    </ClCompile>
+    <ClCompile Include="syCharacter.cpp">
+      <Filter>syGame</Filter>
+    </ClCompile>
+    <ClCompile Include="syEnemy.cpp">
+      <Filter>syGame</Filter>
+    </ClCompile>
+    <ClCompile Include="syFiniteState.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syFSM.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="syEnemyState.cpp">
+      <Filter>syGame\marioState</Filter>
+    </ClCompile>
+    <ClCompile Include="syEnemySTAND.cpp">
+      <Filter>syGame\marioState</Filter>
+    </ClCompile>
+    <ClCompile Include="syEnemyATTACK.cpp">
+      <Filter>syGame\marioState</Filter>
+    </ClCompile>
+    <ClCompile Include="syEnemyDEAD.cpp">
+      <Filter>syGame\marioState</Filter>
+    </ClCompile>
+    <ClCompile Include="syEnemyMove.cpp">
+      <Filter>syGame\marioState</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="syCore.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syInput.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sySound.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sySoundMgr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syTimer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syWindow.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syStd.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syBitmap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syBitmapMgr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syScriptManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sySprite.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syObject.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syCollision.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syButtonCtrl.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="syImgCtrl.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="syListCtrl.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="syPanel.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="syScene.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="syUIComponent.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="syPlayer.h">
+      <Filter>syGame</Filter>
+    </ClInclude>
+    <ClInclude Include="syBackground.h">
+      <Filter>syGame</Filter>
+    </ClInclude>
+    <ClInclude Include="syCharacter.h">
+      <Filter>syGame</Filter>
+    </ClInclude>
+    <ClInclude Include="syEnemy.h">
+      <Filter>syGame</Filter>
+    </ClInclude>
+    <ClInclude Include="syFiniteState.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syFSM.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="syEnemyState.h">
+      <Filter>syGame\marioState</Filter>
+    </ClInclude>
+    <ClInclude Include="syEnemyATTACK.h">
+      <Filter>syGame\marioState</Filter>
+    </ClInclude>
+    <ClInclude Include="syEnemyDEAD.h">
+      <Filter>syGame\marioState</Filter>
+    </ClInclude>
+    <ClInclude Include="syEnemyMove.h">
+      <Filter>syGame\marioState</Filter>
+    </ClInclude>
+    <ClInclude Include="syEnemySTAND.h">
+      <Filter>syGame\marioState</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+</Project>

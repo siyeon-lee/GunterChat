@@ -1,0 +1,23 @@
+#SPRITE	5 mario.bmp null
+forword 7 300 0 1 0 null null
+0	271	0	14	17
+1	299	0	18	17
+2	240	0	16	17
+3	299	0	18	17
+4	240	0	16	17
+5	299	0	18	17
+6	271	0	14	17
+backword 7 300 0 1 0 null null
+0	120	0	14	17
+1	88	0	18	17
+2	149	0	16	17
+3	88	0	18	17
+4	149	0	16	17
+5	88	0	18	17
+6	120	0	14	17
+idleforword 1 300 0 1 0 null null
+0	210	0	15	17
+idlebackword 1 300 0 1 0 null null
+0	180	0	15	17
+deadforword 1 300 0 1 0 null null
+0	389 15 16 16
