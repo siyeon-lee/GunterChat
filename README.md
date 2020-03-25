@@ -66,10 +66,8 @@
  - 실행시 LoginScene(서버 연결) - Lobby Scene(게임시작준비/결과) - InGameScene(게임진행) 
  - 게임오버될경우 Lobby Scene으로 돌아감\
  
-<<<<<<< HEAD
  
  4. 오브젝트
-=======
 #### 4. 오브젝트 생성
 
 >>>>>>> 47e1b0665a47bfec33cf49fa6e5c46cb3a5fd997
@@ -84,10 +82,8 @@ syEnemy
 syBackGround
   - tiled 이용.
   - 모든 배경을 tile화 하여 각각 비트맵 그려줌
-<<<<<<< HEAD
     > cpu 점유율이 너무 높아짐
     >> 충돌 체크를 해야 하는 발판들만 tile로 구현 
-=======
     > cpu 점유율이 너무 높아서 충돌 체크를 해야 하는 발판들만 tile로 구현 
        
 #### 5. FSM
