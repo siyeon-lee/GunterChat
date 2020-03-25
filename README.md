@@ -1,6 +1,6 @@
 # WinAPI를 이용한 2D게임 제작
 
-## 게임 소개
+## 1. 게임 소개
 - 제목
   + 하늘에서 마리오가 내려와
 - 컨셉
@@ -15,17 +15,22 @@
   + 이동 : 방향키
   + 프레임 확인 : 스페이스바
   
-## 구현 내용
-- 충돌 시스템 - 플랫폼과 게임캐릭터간의 충돌
-- 중력 - 공중에 있을 시 아래로 추락, 점프 시 포물선 운동
-- 소리 - Fmod 라이브러리 이용. 배경음악 및 효과음
-- 스프라이트 - 게임캐릭터들의 상태에 따라 스프라이트 바뀜
-- FSM - Move, Stand, Attack, Dead
+## 2. 구현 내용
+[게임 엔진]
+- 충돌 시스템 : 플랫폼과 게임캐릭터간의 충돌
+- 중력 : 공중에 있을 시 아래로 추락, 점프 시 포물선 운동
+- 소리 : Fmod 라이브러리 이용. 배경음악 및 효과음
+- 스프라이트 : 게임캐릭터들의 상태에 따라 스프라이트 바뀜
+- FSM : Move, Stand, Attack, Dead
 - UI - 이벤트에 따라 SCENE 전환
-- 글꼴 - AddFontResource() 사용하여 기본 글꼴 바꿈
-
-## 클래스 구성
-### 전체적 흐름
+- 글꼴 : AddFontResource() 사용하여 기본 글꼴 바꿈
+- 유저 입력 : 마우스, 키보드
+[네트워크]
+- 채팅 프로그램 제작
+- Winsock의 TCP 프로토콜 제작
+- EventSelect 모델 사용하여 서버와 클라이언트 제작
+## 3. 클래스 구성
+### 3.1 전체적 흐름
 ![클래스구성](./img/%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B5%AC%EC%84%B1.png)
 
 - sample - 메인 함수(Init - Frame - Render -Release)
@@ -36,11 +41,11 @@
 - Clientsample - 채팅 클라이언트 담당
 - GameScene - 게임 씬 담당
 
-### syLib
+### 3.2 syLib
 [syLib](https://github.com/siyeon-lee/GunterChat/tree/master/syLib"syLib")
 게임 구동하는 엔진 라이브러리
 
-#### 1. sywindow, sycore 클래스
+#### 3.2.1. sywindow, sycore 클래스
 ![windows -core](./img/corewindow.png)
  - syWindow
   - 윈도우를 생성한다
@@ -48,7 +53,7 @@
 - syCore
   - 게임의 기본 흐름을 관장하는 core를 생성한다.
 
-#### 2. 클래스 매니저들
+#### 3.2.2. 클래스 매니저들
 ![클래스매니저](./img/클래스매니저.png)
 - Singleton Pattern 사용
   - 전담 매니저 사용
@@ -60,14 +65,14 @@
 + syScriptManager : 필요한 리소스 스크립트화 하여 관리
 + sySoundMgr
 
-#### 3. UI
+#### 3.2.3. UI
  ![UI](./img/UI.png)
  ![scene](./img/scene.png)
  - 실행시 LoginScene(서버 연결) - Lobby Scene(게임시작준비/결과) - InGameScene(게임진행) 
  - 게임오버될경우 Lobby Scene으로 돌아감\
  
  
-#### 4. 오브젝트 생성
+#### 3.2.4. 오브젝트 생성
  ![Object](./img/오브젝트.png)
 - syCharacter
    - sprite클래스 상속
@@ -83,7 +88,7 @@ syBackGround
     >> 충돌 체크를 해야 하는 발판들만 tile로 구현 
     > cpu 점유율이 너무 높아서 충돌 체크를 해야 하는 발판들만 tile로 구현 
        
-#### 5. FSM
+#### 3.2.5. FSM
  ![FSM](./img/FSM.png)
 - syEnemy의 m_ActionList에는 Move,~~Stand, Attack,~~ Dead가 할당되어 있음
 - 기본 Stand 상태에서 특정 event가 발생할 때마다 Enemy(마리오)의 상태 전환
@@ -96,21 +101,21 @@ syBackGround
   - 공격을 받은 적의 상태
   - 특정 적이 DEAD STATE가 되면 3초 뒤 제거, 5초 뒤 리스폰한다.
   
-#### 6. 플레이어
+#### 3.2.6. 플레이어
 
 ![정지](./img/정지.png)
 ![이동](./img/이동.png)
 ![점프](./img/점프.png)
 - 키 입력 상태에 따라 정지/이동/점프
   
-#### 7. 기타
+#### 3.2.7. 기타
 - syPoint, sySphere, syRect
    - 충돌 영역, 캐릭터의 위치, 그려지는 영역 등 지정
 
 
-### ClientSample
+### 3.3 네트워크
 - Event Select 모델 이용
-#### 프로토콜
+#### 3.3.1. 프로토콜
 ```C++
 //위치, 점수, 채팅메세지 통보
 #define PACKET_CHAR_MSG			 1000 
@@ -133,11 +138,27 @@ syBackGround
 //점수 통보
 #define PACKET_RESULT_SC		1009
 ```
-#### 시퀀스 다이어그램
+#### 3.3.2. 시퀀스 다이어그램
  ![gs1](./img/gs1.png)
  
  ![gs2](./img/gs2.png)
  
  ![gs3](./img/gs3.png)
  
- 
+ - GameScene 클래스에서 이벤트에 따라 씬 전환
+ - ClientSample 클래스에서 RecvPool에 있는 패킷의 프로토콜 타입에 따라 채팅 관리
+  
+### 3.4 Window API
+![창](./img/clientsample.png)
+  - 4개의 차일드 윈도우
+  - editBox통해 채팅 입력받고 전송
+    > 엔터키 활성화 위해 서브클래싱 사용
+    >```C++
+    old_edit_proc = (WNDPROC)SetWindowLongPtr(m_hEdit, GWLP_WNDPROC, (LONG_PTR)myEditProc);
+    ```
+  - 서버에서 받은 메세지 및 점수 순위 listbox에 띄움
+
+
+## 기타
+ ![tiled](./img/tiled.png)
+ - tiled 프로그램으로 맵 제작
