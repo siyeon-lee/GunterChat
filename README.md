@@ -56,9 +56,22 @@
 
 3. UI
  ![UI](./img/UI.png)
-\\<!--
-- current scene – bakgroundList – ctrlList – PlayerList - EnemyList
--->
  ![scene](./img/scene.png)
- - 실행시 LoginScene - Lobby Scene - InGameScene 
- - 게임오버될경우 Lobby Scene으로 돌아감
+ - 실행시 LoginScene(서버 연결) - Lobby Scene(게임시작준비/결과) - InGameScene(게임진행) 
+ - 게임오버될경우 Lobby Scene으로 돌아감\
+ 
+ 
+ 4. 오브젝트
+ ![Object](./img/오브젝트.png)
+- syCharacter
+   - sprite클래스 상속
+   - 비트맵 크기 조절, 중력, 발판과의 충돌 처리 구현
+- syPlayer
+  - 프레임마다 방향키 입력시 이동 구현
+syEnemy
+  - FSM 통해 움직임 구현 및 스프라이트 변경
+syBackGround
+  - tiled 이용.
+  - 모든 배경을 tile화 하여 각각 비트맵 그려줌
+    > cpu 점유율이 너무 높아짐
+    >> 충돌 체크를 해야 하는 발판들만 tile로 구현 
