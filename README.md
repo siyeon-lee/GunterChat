@@ -26,5 +26,39 @@
 ![클래스구성](./img/%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B5%AC%EC%84%B1.png)
 
 - sample - 메인 함수(Init - Frame - Render -Release)
-- Clientsample - 채팅 서버 담당
+  - 각 클래스들은 Init에서 필요한 정보 생성 및 로드, 할당
+  - Frame에서 필요한 계산
+  - Render를 통해 화면에 뿌려진다. 
+  - 모든 작업이 완료된 뒤에는 Release를 통해 할당 해제한다.
+- Clientsample - 채팅 클라이언트 담당
 - GameScene - 게임 씬 담당
+
+#### sylib
+1. sywindow, sycore 클래스
+![windows -core](./img/corewindow.png)
+ - syWindow
+  - 윈도우를 생성한다
+  - 윈도우 인스턴스 핸들, 윈도우 핸들, Client 크기 
+- syCore
+  - 게임의 기본 흐름을 관장하는 core를 생성한다.
+
+2. 클래스 매니저들
+![클래스매니저](./img/클래스매니저.png)
+- Singleton Pattern 사용
+  - 전담 매니저 사용
+  - 리소스를 전담 매니저 통해 불러 코드 어디서든 사용 가능하게
+  - 리소스 중복 호출을 방지
++ syInput : 마우스, 키보드 등 유저 입력 관리
++ syBitmapMgr : 비트맵 파일 리소스 관리
++ syFSM 
++ syScriptManager : 필요한 리소스 스크립트화 하여 관리
++ sySoundMgr
+
+3. UI
+ ![UI](./img/UI.png)
+\\<!--
+- current scene – bakgroundList – ctrlList – PlayerList - EnemyList
+-->
+ ![scene](./img/scene.png)
+ - 실행시 LoginScene - Lobby Scene - InGameScene 
+ - 게임오버될경우 Lobby Scene으로 돌아감
