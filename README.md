@@ -111,4 +111,35 @@ syBackGround
 
 
 ### ClientSample
->>>>>>> 47e1b0665a47bfec33cf49fa6e5c46cb3a5fd997
+- Event Select 모델 이용
+#### 프로토콜
+```C++
+//위치, 점수, 채팅메세지 통보
+#define PACKET_CHAR_MSG			 1000 
+//유저 확인 요청
+#define PACKET_CHAR_NAME_SC_REQ  1001
+//유저 확인 통보
+#define PACKET_CHAR_NAME_CS_ACK  1002 
+//접속 허가
+#define PACKET_JOIN_SIGNIN_SC	 1003 
+//접속 요청
+#define PACKET_JOIN_USER_SC		 1004 
+//종료 요청
+#define PACKET_DRUP_CS_REQ		 1005 
+//종료 허가
+#define PACKET_DRUP_SC_ACK		 1006 
+//접속 해제
+#define PACKET_DRUP_USERS_SC	1007 
+//점수 통보
+#define PACKET_RESULT_CS		1008	
+//점수 통보
+#define PACKET_RESULT_SC		1009
+```
+#### 시퀀스 다이어그램
+ ![gs1](./img/gs1.png)
+ 
+ ![gs2](./img/gs2.png)
+ 
+ ![gs3](./img/gs3.png)
+ 
+ 
