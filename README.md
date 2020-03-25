@@ -61,17 +61,22 @@
  - 게임오버될경우 Lobby Scene으로 돌아감\
  
  
- 4. 오브젝트
+ 4. 오브젝트 생성
  ![Object](./img/오브젝트.png)
 - syCharacter
    - sprite클래스 상속
    - 비트맵 크기 조절, 중력, 발판과의 충돌 처리 구현
 - syPlayer
   - 프레임마다 방향키 입력시 이동 구현
-syEnemy
+- syEnemy
   - FSM 통해 움직임 구현 및 스프라이트 변경
-syBackGround
+- syBackGround
   - tiled 이용.
   - 모든 배경을 tile화 하여 각각 비트맵 그려줌
-    > cpu 점유율이 너무 높아짐
-    >> 충돌 체크를 해야 하는 발판들만 tile로 구현 
+    > cpu 점유율이 너무 높아서 충돌 체크를 해야 하는 발판들만 tile로 구현 
+       
+5. FSM
+ ![FSM](./img/FSM.png)
+- syEnemy의 m_ActionList에는 Move, Stand, Attack, Dead가 할당되어 있음
+- 기본 Stand 상태에서 특정 event가 발생할 때마다 Enemy(마리오)의 상태 전환
+
