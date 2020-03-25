@@ -1,4 +1,10 @@
-
+*.exe
+*.lik
+*.log
+*.tlog
+*.obj
+*.idb
+*.pdb
 NetworkServer/NetworkServer.exe
 NetworkServer/NetworkServer.ilk
 NetworkServer/NetworkServer.vcxproj
