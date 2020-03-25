@@ -22,3 +22,9 @@ UI - 이벤트에 따라 SCENE 전환
 프레임 제한 - 30FPS 유지하여 컴퓨터 성능과 무관하게 게임이 돌아가게 함
 글꼴 - AddFontResource() 사용하여 기본 글꼴 바꿈
 
+## 클래스 구성
+### 전체적 흐름
+![클래스구성](./img/%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B5%AC%EC%84%B1.png)
+sample - 메인 함수
+Clientsample - 채팅 서버 담당
+GameScene - 게임 씬 담당
