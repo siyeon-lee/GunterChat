@@ -5,6 +5,8 @@
 *.obj
 *.idb
 *.pdb
+*.cd
+
 NetworkServer/NetworkServer.exe
 NetworkServer/NetworkServer.ilk
 NetworkServer/NetworkServer.vcxproj
