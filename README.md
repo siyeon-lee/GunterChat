@@ -33,7 +33,10 @@
 - Clientsample - 채팅 클라이언트 담당
 - GameScene - 게임 씬 담당
 
-#### sylib
+### syLib
+[syLib](https://github.com/siyeon-lee/GunterChat/tree/master/syLib"syLib")
+게임 구동하는 엔진 라이브러리
+
 1. sywindow, sycore 클래스
 ![windows -core](./img/corewindow.png)
  - syWindow
@@ -79,13 +82,19 @@
 - syEnemy의 m_ActionList에는 Move,~~Stand, Attack,~~ Dead가 할당되어 있음
 - 기본 Stand 상태에서 특정 event가 발생할 때마다 Enemy(마리오)의 상태 전환
 - Move
+
 ![Move](./img/Move.png)
   - 적이 발판 위에 올라선 기본 상태
   - 무작위한 시간 간격으로 점프를 하며 항상 이동한다.
 - Dead
+
 ![Dead](./img/Dead.png)
   - 공격을 받은 적의 상태
   - 특정 적이 DEAD STATE가 되면 3초 뒤 제거, 5초 뒤 리스폰한다.
-
   
-  - Dead
+6. 플레이어
+
+![정지](./img/정지.png)
+![이동](./img/이동.png)
+![점프](./img/점프.png)
+
