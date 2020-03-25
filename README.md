@@ -38,7 +38,7 @@
   - Frame에서 필요한 계산
   - Render를 통해 화면에 뿌려진다. 
   - 모든 작업이 완료된 뒤에는 Release를 통해 할당 해제한다.
-- Clientsample - 채팅 클라이언트 담당
+- Clientsample - 채팅, WinAPI 창띄우기 담당
 - GameScene - 게임 씬 담당
 
 ### 3.2 syLib
@@ -114,7 +114,15 @@ syBackGround
 
 
 ### 3.3 네트워크
+- ClientSample 클래스
 - Event Select 모델 이용
+
+- PacketProcess()
+  >RecvPool에 담긴 패킷을 읽어서 패킷 헤더 타입에 따라 알맞게 처리한다.
+- m_Network.Frame() 
+  > 접속 여부를 판단하고 접속 실패시 재접속 혹은 클라이언트를 닫는다
+  > RSet WSet에 소켓을 넣어준다.
+
 #### 3.3.1. 프로토콜
 ```C++
 //위치, 점수, 채팅메세지 통보
@@ -153,12 +161,12 @@ syBackGround
   - 4개의 차일드 윈도우
   - editBox통해 채팅 입력받고 전송
     > 엔터키 활성화 위해 서브클래싱 사용
-    >```C++
+    ```C++
     old_edit_proc = (WNDPROC)SetWindowLongPtr(m_hEdit, GWLP_WNDPROC, (LONG_PTR)myEditProc);
     ```
   - 서버에서 받은 메세지 및 점수 순위 listbox에 띄움
 
 
-## 기타
+## 4. 기타
  ![tiled](./img/tiled.png)
  - tiled 프로그램으로 맵 제작
